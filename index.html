@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Little Surprise for my Tiny Little ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- ================= PASSWORD SCREEN ================= -->
+
+    <section id="password-screen" class="screen active">
+
+        <div class="lock-box">
+
+            <h1>🔐 A Little Secret for Tiny Little❤️</h1>
+
+            <p>
+                This little world is only my baibyy❤️
+            </p>
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter the password"
+            >
+
+            <button onclick="unlock()">
+                Unlock ❤️
+            </button>
+
+            <p id="message"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MAIN WEBSITE ================= -->
+
+    <div id="main-site">
+
+
+        <!-- ================= MUSIC PLAYER ================= -->
+
+        <div class="music-player">
+
+            <h3>🎵 Our Music</h3>
+
+            <p id="music-name">
+                Choose a song ❤️
+            </p>
+
+            <button
+                class="music-button"
+                onclick="chooseSong(1)"
+            >
+                🎵 Song 1
+            </button>
+
+            <button
+                class="music-button"
+                onclick="chooseSong(2)"
+            >
+                💕 Song 2
+            </button>
+
+            <button
+                class="music-button"
+                onclick="chooseSong(3)"
+            >
+                💗 Song 3
+            </button>
+
+            <div class="music-controls">
+
+                <button
+                    class="control-button"
+                    onclick="playPause()"
+                    id="play-button"
+                >
+                    ▶️ Play
+                </button>
+
+            </div>
+
+            <div class="volume-box">
+
+                <span>🔊</span>
+
+                <input
+                    type="range"
+                    id="volume"
+                    min="0"
+                    max="1"
+                    step="0.01"
+                    value="0.7"
+                    onchange="changeVolume()"
+                >
+
+            </div>
+
+        </div>
+
+
+        <!-- AUDIO -->
+
+        <audio id="bgMusic"></audio>
+
+
+        <!-- ================= HOME ================= -->
+
+        <section id="home" class="screen">
+
+            <div class="home-box">
+
+                <p class="small-text">
+                    A little surprise made especially for you...
+                </p>
+
+                <h1>
+                    Happy Birthday Tiny Little❤️
+                </h1>
+
+                <h2>
+                    Mera bacchaa❤️
+                </h2>
+
+                <p class="message">
+                    Today is your special day, but somehow I feel like
+                    I'm the lucky one for having you in my life.
+                </p>
+
+                <button onclick="showScreen('story')">
+                    Surprise 💕
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= STORY ================= -->
+
+        <section id="story" class="screen">
+
+            <div class="page">
+
+                <p class="small-text">
+                    Chapter One
+                </p>
+
+                <h1>
+                    Our Story ❤️
+                </h1>
+
+                <p class="story-text">
+                    kuch pyaari sunehri yaadien jo ki bohot 
+                    jyada to ni h pr bohot satisfying h❤️
+                </p>
+
+                <div class="story-card">
+
+                    <div class="heart">
+                        ❤️
+                    </div>
+
+                    <h2>
+                        The Beginning
+                    </h2>
+
+                    <p>
+                        slide through the moments❤️...
+                    </p>
+
+                </div>
+
+                <button onclick="showScreen('memories')">
+                    Next → 📸
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= MEMORIES ================= -->
+
+        <section id="memories" class="screen">
+
+            <div class="memory-page">
+
+                <p class="memory-chapter">
+                    ♥ Chapter Two ♥
+                </p>
+
+                <h1>
+                    Our Memories 📸
+                </h1>
+
+                <div class="memory-slider">
+
+                    <button
+                        class="slide-button"
+                        onclick="previousPhoto()"
+                    >
+                        ❮
+                    </button>
+
+
+                    <div class="polaroid">
+
+                        <img
+                            id="memory-image"
+                            src="images/photo1.jpg"
+                            alt="Our memory"
+                        >
+
+                    </div>
+
+
+                    <button
+                        class="slide-button"
+                        onclick="nextPhoto()"
+                    >
+                        ❯
+                    </button>
+
+                </div>
+
+
+                <p class="slide-text">
+                    ← See all our memories → ❤️
+                </p>
+
+
+               <div class="dots">
+    <span class="dot active" onclick="showPhoto(0, 'next')"></span>
+    <span class="dot" onclick="showPhoto(1, 'next')"></span>
+    <span class="dot" onclick="showPhoto(2, 'next')"></span>
+    <span class="dot" onclick="showPhoto(3, 'next')"></span>
+    <span class="dot" onclick="showPhoto(4, 'next')"></span>
+    <span class="dot" onclick="showPhoto(5, 'next')"></span>
+    <span class="dot" onclick="showPhoto(6, 'next')"></span>
+    <span class="dot" onclick="showPhoto(7, 'next')"></span>
+    <span class="dot" onclick="showPhoto(8, 'next')"></span>
+    <span class="dot" onclick="showPhoto(9, 'next')"></span>
+    <span class="dot" onclick="showPhoto(10, 'next')"></span>
+    <span class="dot" onclick="showPhoto(11, 'next')"></span>
+    <span class="dot" onclick="showPhoto(12, 'next')"></span>
+    <span class="dot" onclick="showPhoto(13, 'next')"></span>
+    <span class="dot" onclick="showPhoto(14, 'next')"></span>
+    <span class="dot" onclick="showPhoto(15, 'next')"></span>
+    <span class="dot" onclick="showPhoto(16, 'next')"></span>
+    <span class="dot" onclick="showPhoto(17, 'next')"></span>
+    <span class="dot" onclick="showPhoto(18, 'next')"></span>
+</div>
+
+
+                <button
+                    class="memory-next"
+                    onclick="showScreen('reasons')"
+                >
+                    Next → 💌
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= REASONS ================= -->
+
+        <section id="reasons" class="screen">
+
+            <div class="reasons-content">
+
+                <p class="small-text">
+                    Chapter Three
+                </p>
+
+                <h1>
+                    Reasons I Love You 💌
+                </h1>
+
+                <p class="reasons-intro">
+                    There are probably a million reasons,
+                    but here are a few of my favourites...
+                </p>
+
+
+                <div class="reasons-container">
+
+
+                    <div
+                        class="reason-card"
+                        onclick="showReason(1)"
+                    >
+
+                        <span>01</span>
+
+                        <p>
+                            Click me ❤️
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        class="reason-card"
+                        onclick="showReason(2)"
+                    >
+
+                        <span>02</span>
+
+                        <p>
+                            Click me 💕
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        class="reason-card"
+                        onclick="showReason(3)"
+                    >
+
+                        <span>03</span>
+
+                        <p>
+                            Click me 💗
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        class="reason-card"
+                        onclick="showReason(4)"
+                    >
+
+                        <span>04</span>
+
+                        <p>
+                            Click me 💖
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+                <div id="reason-message"></div>
+
+
+                <button onclick="showScreen('letter')">
+                    Next → ✉️
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= LETTER ================= -->
+
+        <section id="letter" class="screen">
+
+            <div class="page">
+
+                <p class="small-text">
+                    Chapter Four
+                </p>
+
+                <h1>
+                    A Little Letter For Badmaash 💌
+                </h1>
+
+
+                <div class="letter-card">
+
+             <h2>
+                To My Love Sweetu baibyy ❤️
+            </h2>
+
+            <p>
+                Happy Birthday mela baccha ,pata h... hum n...tumse n...
+                bohot jyada pyaar krte h ,smjhe cutu.
+            </p>
+
+            <p>
+                I don't know if words will ever be enough to explain
+                how special you are to me, but I hope this little
+                surprise reminds you of how much you mean to me.
+            </p>
+
+            <p>
+                Thank you so much for always understanding me 
+                and being there for me .
+            </p>
+
+            <p>
+                I hope this year brings you everything you wish for
+                (mko ghummi ghummi bhi to krana h aapko)
+                And I hope I get to be beside you through all of it.
+                I am always here for you for all your highs and lows ❤️
+            </p>
+
+            <p class="signature">
+                Forever yours,<br>
+                Badmaash ❤️
+            </p>
+
+                </div>
+
+
+                <button onclick="showScreen('final')">
+                    One Last Surprise → 🎁
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FINAL SURPRISE ================= -->
+
+        <!-- ================= FINAL SURPRISE ================= -->
+
+<section id="final" class="screen">
+
+    <div class="final-page">
+
+        <p class="small-text">
+            The Final Chapter
+        </p>
+
+        <h1>
+            One Last Surprise Ikko ke papaa 🎁
+        </h1>
+
+        <p class="final-text">
+            Before you leave this little world I made for you...
+        </p>
+
+        <div
+            class="gift-box"
+            onclick="openGift()"
+        >
+            🎁
+        </div>
+
+        <p
+            class="click-text"
+            id="click-gift-text"
+        >
+            Click the gift ❤️
+        </p>
+
+        <div id="final-message"></div>
+
+    </div>
+
+</section>
+
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
